@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Art of the Refactor: Scoping Problem Domain of old "vsc-translate" directive</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clarity-ui/0.10.28/clarity-ui-dark.min.css"/>
+   <link rel="stylesheet" href="styles.css"/>
+
+   <script src="https://d3js.org/d3.v4.min.js"></script>
+   <script src="layout.js"></script>
+
+</head>
+<body onload="pageInit()">
+
+<div class="main-container">
+   <ul id="treeMap" class="nav" role="tablist">
+
+      <li role="presentation" class="nav-item">
+         <button
+                 id="tab1"
+                 class="btn btn-link nav-link"
+                 type="button"
+                 onclick="changeTab('1')"
+         >
+            HTML templates
+            (<span id="tab1ItemsCount"></span>)
+
+         </button>
+      </li>
+
+      <li role="presentation" class="nav-item">
+         <button
+                 id="tab2"
+                 class="btn btn-link nav-link"
+                 type="button"
+                 onclick="changeTab('2')"
+         >
+            <div style="color: #f80">
+               Scope Stats
+            </div>
+
+         </button>
+      </li>
+
+   </ul>
+
+   <section id="panel1" role="tabpanel" hidden aria-labelledby="tab1">
+      <svg id="svg1" width="10000" height="1080"></svg>
+   </section>
+
+   <!-- project plan -->
+   <section id="panel2" role="tabpanel" hidden aria-labelledby="tab2">
+
+      <table id="scopeStatisticsTable">
+         <thead>
+         <th>Type</th>
+         <th>Files Affected</th>
+         <th>Total Occurrences</th>
+         </thead>
+         <tr>
+            <td id="htmlTypeDescriptor"></td>
+            <td id="htmlFilesAffectedCount"></td>
+            <td id="htmlTotalOccurrencesCount"></td>
+         </tr>
+
+      </table>
+
+      <hr/>
+
+   </section>
+
+</div>
+</body>
+</html>

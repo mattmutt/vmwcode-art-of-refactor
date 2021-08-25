@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background: none;
+}
+
+svg rect {
+    fill-opacity: 0.3;
+}
+
+svg rect:hover {
+    fill-opacity: 0.5;
+}
+
+/**
+all text
+ */
+svg tspan {
+    font: 12px Helvetica;
+}
+
+svg a, svg a:hover {
+    text-decoration: none;
+}
+
+/*
+item title
+*/
+svg tspan:first-child {
+    fill: #ccc;
+    fill-opacity: 0.7;
+}
+
+svg a:hover tspan:first-child {
+    fill-opacity: 1;
+    fill: #dde;
+    font-weight: bold;
+}
+
+/*
+item count
+*/
+svg tspan:last-child {
+    font-size: 11px;
+    fill: #ddd;
+    fill-opacity: 0.4;
+}
+
+svg a:hover tspan:last-child {
+    fill-opacity: .9;
+}
+
+table#scopeStatisticsTable {
+    cell-spacing: 1rem;
+    border-spacing: 1rem;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+table#scopeStatisticsTable TBODY {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+table#scopeStatisticsTable TD:nth-of-type(2),
+table#scopeStatisticsTable TD:nth-of-type(3) {
+    text-align: right;
+}
